@@ -1,12 +1,20 @@
 require 'rubygems'
-begin
-  require 'wirble'
-  Wirble.init
-  Wirble.colorize
-rescue LoadError => err
-  warn "Couldn't load Wirble: #{err}"
+{
+  'wirble'        => lambda { Wirble.init; Wirble.colorize unless Config::CONFIG['host_os'] == 'mswin32'; },
+  # wirble already requires irb/completion and pp. Also adds ri
+  'irb/completion'=> nil,
+  'pp'            => nil,
+  'map_by_method' => nil,
+  'what_methods'  => nil,
+}.each do |name, block|
+  begin
+    require name
+    block.call unless block.nil?
+  rescue LoadError => err
+    warn "Error loading #{name}: #{err}"
+  end
 end
 
-require 'irb/completion'
 IRB.conf[:AUTO_INDENT] = true
-ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+IRB.conf[:USE_READLINE] = true
+IRB.conf[:PROMPT_MODE] = :SIMPLE
