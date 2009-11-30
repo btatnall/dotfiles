@@ -19,11 +19,11 @@ IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:USE_READLINE] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-# TODO make this use Rails.logger
 # print SQL to STDOUT
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
   require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ActiveRecord::Base.clear_active_connections!
 end
 
 # Copy to OS X clipboard
