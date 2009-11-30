@@ -1,0 +1,12 @@
+[user]
+  name = Brian Tatnall
+  email = btatnall@gmail.com
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = auto
+[branch]
+  autosetupmerge = true
+[core]
+  autocrlf = input

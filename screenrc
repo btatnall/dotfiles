@@ -1,0 +1,17 @@
+# Use Ctrl-\ as hotkey
+# escape \034\034
+
+# Use backtick as hotkey (and repeat to type literal backtick)
+escape ``
+
+# Don't use Ctrl-S as hotkey, it hangs the terminal!
+# escape "^Ss"
+
+vbell on
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+
+# Terminals I use support native scrolling nicely, so make Screen use that
+termcapinfo xterm ti@:te@
+
+# Default is 100 lines of scrollback
+defscrollback 5000
