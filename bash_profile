@@ -8,8 +8,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 export CLICOLOR=1
-#export LSCOLORS=dxfxcxdxbxegedabagacad
-export LSCOLORS=ExFxCxDxBxegedabagacad
+export LSCOLORS=dxfxcxdxbxegedabagacad
 
 if [ "\$(type -t __git_ps1)" ]; then
   LIGHTBLUE="\[\033[0;36m\]"
