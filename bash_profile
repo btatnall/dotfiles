@@ -1,8 +1,24 @@
 # .bash_profile
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
+# running as bash
+if [ -n "$BASH_VERSION" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
+export CLICOLOR=1
+#export LSCOLORS=dxfxcxdxbxegedabagacad
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+if [ "\$(type -t __git_ps1)" ]; then
+  LIGHTBLUE="\[\033[0;36m\]"
+  WHITE="\[\033[1;37m\]"
+  PURPLE="\[\033[1;35m\]"
+  PS1="\$(__git_ps1 '$PURPLE($LIGHTBLUE%s$PURPLE)$WHITE ')$PS1"
+  export GIT_PS1_SHOWDIRTYSTATE=true
+  export GIT_PS1_SHOWSTASHSTATE=true
+  export GIT_PS1_SHOWUNTRACKEDFILES=true
 fi
 
 # User specific environment and startup programs

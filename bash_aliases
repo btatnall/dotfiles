@@ -50,11 +50,9 @@ alias j='jobs -l'
 # Database
 alias mysql=mysql5
 
-# Ruby
-alias irb='irb --readline -r irb/completion -rubygems' # use readline, completion and require rubygems by default for irb
-
-# JRuby
+# Ruby || JRuby
 alias jruby='$JRUBY_HOME/bin/jruby'
+alias irb='jirb' # by default use jruby irb
 
 # Rails
 alias ss='jruby script/server'
@@ -67,8 +65,14 @@ alias sst='svn st'
 alias svnclear='find . -name .svn -print0 | xargs -0 rm -rf' # removes all .svn folders from directory recursively
 alias svnaddall='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add' # adds all unadded files
 
+# GIT
+alias g="git"
+
 # Vim
 alias nerd='vim -c NERDTree'
+
+# Screen
+alias screen='TERM=screen screen'
 
 # Q Language
 alias q="~/q/m32/q"

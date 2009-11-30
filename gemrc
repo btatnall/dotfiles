@@ -10,3 +10,4 @@ update: --env-shebang
 - http://gemcutter.org
 - http://gems.rubyforge.org
 - http://gems.github.com
+- http://gems.us.drwholdings.com:8808/

@@ -6,12 +6,32 @@ escape ``
 
 # Don't use Ctrl-S as hotkey, it hangs the terminal!
 # escape "^Ss"
-
 vbell on
+
+### Captions
+#caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%y/%m/%d(%D) %{=b wm}%c"
 caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+
+### Hard Status - hack
+#hardstatus alwaysignore
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d-%m %{W}%c %{g}]'
+bind T hardstatus ignore
+bind R hardstatus alwayslastline
 
 # Terminals I use support native scrolling nicely, so make Screen use that
 termcapinfo xterm ti@:te@
 
+# terminfo and termcap for nice 256 color terminal 
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+
 # Default is 100 lines of scrollback
 defscrollback 5000
+
+activity "something going on in %n"
+
+startup_message off
+
+# make the shell in every window a login shell
+shell -${SHELL}

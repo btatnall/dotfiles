@@ -4,9 +4,35 @@
 [color]
   branch = auto
   diff = auto
+  grep = auto
+  interactive = auto
   status = auto
   ui = auto
+[alias]
+  st = status
+  c = commit -am
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  di = diff
+  dic = diff --cached
+  a = add
+  pl = pull
+  plre = pull --rebase
+  ps = push
+  lg = log -p
+  last = log -1 HEAD
+  out = log origin..HEAD
+  pending = !git --no-pager log origin/master..master && echo
+  missing = !sh -c 'git cherry "$0" | cut -sd + -f 2 | xargs "git show"'
 [branch]
   autosetupmerge = true
 [core]
   autocrlf = input
+  excludesfile = /Users/btatnall/.gitignore
+  editor = mate -wl1
+[push]
+  default = tracking
+[apply]
+  ignorewhitespace = true
