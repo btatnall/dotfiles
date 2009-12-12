@@ -22,6 +22,7 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 # print SQL to STDOUT
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
   require 'logger'
+  require 'activerecord'
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   ActiveRecord::Base.clear_active_connections!
 end
