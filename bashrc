@@ -3,13 +3,12 @@
 # rvm-install added line:
 if [[ -s ~/.rvm/scripts/rvm ]] ; then . ~/.rvm/scripts/rvm ; fi
 
-if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
-
-if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
-
 # MacPorts bash-completion
 if [ -f /opt/local/etc/bash_completion ]; then . /opt/local/etc/bash_completion ; fi
 
+if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
+if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
+if [ -f ~/.bash_apps ]; then . ~/.bash_apps ; fi
 if [ -f ~/.bash_user ]; then . ~/.bash_user ; fi
 
 # History

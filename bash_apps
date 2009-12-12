@@ -1,0 +1,5 @@
+# mongodb
+if [ -h ~/opt/mongodb/current ]; then
+  MONGODB_HOME=~/opt/mongodb/current
+  PATH=$MONGODB_HOME/bin:$PATH
+fi
