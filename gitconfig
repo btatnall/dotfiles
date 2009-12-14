@@ -27,7 +27,7 @@
   pending = !git --no-pager log origin/master..master && echo
   missing = !sh -c 'git cherry "$0" | cut -sd + -f 2 | xargs "git show"'
 [branch]
-  autosetupmerge = true
+  autosetupmerge = always
 [core]
   autocrlf = input
   excludesfile = /Users/btatnall/.gitignore
