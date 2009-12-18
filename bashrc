@@ -11,6 +11,14 @@ if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
 if [ -f ~/.bash_apps ]; then . ~/.bash_apps ; fi
 if [ -f ~/.bash_user ]; then . ~/.bash_user ; fi
 
+MACPORTPATH=/opt/local
+MANPATH=$MACPORTPATH/share/man:$MANPATH
+PATH=$HOME/bin:$MACPORTPATH/bin:$MACPORTPATH/sbin:/usr/local/bin:$PATH
+export MANPATH PATH
+
+DYLD_LIBRARY_PATH=$HOME/opt/lbm/current/Darwin-9.7.0-x86_64/lib
+export DYLD_LIBRARY_PATH
+
 # History
 export HISTCONTROL=ignoredups
 export HISTCONTROL=ignoreboth
