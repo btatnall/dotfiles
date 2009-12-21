@@ -50,13 +50,9 @@ alias j='jobs -l'
 # Database
 alias mysql=mysql5
 
-# Ruby || JRuby
-alias jruby='$JRUBY_HOME/bin/jruby'
-alias irb='jirb' # by default use jruby irb
-
 # Rails
-alias ss='jruby script/server'
-alias sc='jruby script/console'
+alias ss='./script/server'
+alias sc='./script/console'
 alias a='autotest -rails'
 
 # SVN
