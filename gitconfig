@@ -29,7 +29,7 @@
 [branch]
   autosetupmerge = always
 [core]
-  autocrlf = input
+  safecrlf = true
   excludesfile = /Users/btatnall/.gitignore
   editor = mate -wl1
 [push]

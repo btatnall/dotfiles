@@ -6,7 +6,7 @@ set fileformats=unix,dos,mac
 
 " Colors
 syntax enable
-colorscheme rubyblue
+colorscheme desert
 
 " Folding
 set fen
