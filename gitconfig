@@ -10,7 +10,7 @@
   ui = auto
 [alias]
   st = status
-  c = commit -am
+  c = commit -m
   ci = commit
   br = branch
   co = checkout
