@@ -27,6 +27,9 @@ set ai
 set si
 set cindent
 
+" Turn off window resizing on buffer close
+set noea
+
 "only 1 space after sentences
 set cpoptions-=J
 
@@ -62,5 +65,5 @@ set nowritebackup
 set noswapfile
 
 " NERDTree
-let NERDTreeWinSize=24
+let NERDTreeWinSize=25
 let NERDTreeChDirMode=2
