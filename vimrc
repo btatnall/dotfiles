@@ -1,6 +1,12 @@
 " compatibility
 set nocp
 
+" Setup bundles
+runtime! autoload/pathogen.vim
+if exists('g:loaded_pathogen')
+  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
+end
+
 filetype plugin indent on  " Automatically detect file types.
 set fileformats=unix,dos,mac
 
