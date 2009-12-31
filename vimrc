@@ -25,6 +25,13 @@ set foldnestmax=3 "deepest fold is 3 levels
 "set fillchars=fold:\ " note whitespace after
 "set foldtext=getline(v:foldstart)
 
+" Wildmode
+set wildmenu
+set wildmode=list:longest,full
+
+" Mouse
+set mouse=a
+
 " Tabs
 set tabstop=2
 set shiftwidth=2
