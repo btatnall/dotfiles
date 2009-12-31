@@ -14,13 +14,16 @@ set fileformats=unix,dos,mac
 syntax enable
 colorscheme desert
 
+"backspace over everything in insert mode
+set backspace=indent,eol,start
+
 " Folding
-set fen
-set fdl=10
-set fdl=10
-set foldmethod=syntax
-set foldtext=getline(v:foldstart)
-set fillchars=fold:\ " note whitespace after
+set nofoldenable "dont fold by default
+set foldmethod=indent "fold based on indent
+" set foldmethod=syntax
+set foldnestmax=3 "deepest fold is 3 levels
+"set fillchars=fold:\ " note whitespace after
+"set foldtext=getline(v:foldstart)
 
 " Tabs
 set tabstop=2
@@ -58,8 +61,9 @@ map ? :nohlsearch<CR>
 set ignorecase
 set smartcase
 
-set listchars=tab:>-,trail:.
+"display tabs and trailing spaces
 set list
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 set confirm
 
