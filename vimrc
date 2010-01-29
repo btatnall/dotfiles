@@ -70,7 +70,11 @@ set smartcase
 
 "display tabs and trailing spaces
 set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+if has("multi_byte_encoding")
+  set listchars=tab:»\ ,trail:·,extends:>,precedes:<,eol:¬
+else
+  set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
+endif
 
 set confirm
 

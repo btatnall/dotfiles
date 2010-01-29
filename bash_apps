@@ -11,6 +11,13 @@ if [ -h ~/opt/ant/current ]; then
   export ANT_HOME
 fi
 
+#maven
+if [ -h ~/opt/maven/current ]; then
+  MAVEN_HOME=$HOME/opt/maven/current
+  PATH=$MAVEN_HOME/bin:$PATH
+  export PATH
+fi
+
 # git
 if [ "\$(type -t __git_ps1)" ]; then
   LIGHTBLUE="\[\033[0;36m\]"
