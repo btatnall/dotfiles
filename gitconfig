@@ -9,6 +9,7 @@
   status = auto
   ui = auto
 [alias]
+  s = status -sb
   st = status
   c = commit -m
   ci = commit

@@ -72,3 +72,6 @@ alias q="~/q/m32/q"
 
 # Firefox
 alias ff_dev="/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev &"
+
+# NNS
+alias nns="echo entries | nc nns 1500"

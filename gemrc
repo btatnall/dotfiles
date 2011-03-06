@@ -11,3 +11,4 @@ update: --env-shebang
 - http://gems.rubyforge.org
 - http://gems.github.com
 #- http://gems.us.drwholdings.com:8808/
+#- http://gems-mirror.us.drwholdings.com:8808/

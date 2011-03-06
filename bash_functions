@@ -28,3 +28,11 @@ function mategem {
   GEMDIR=`gem env gemdir`/gems
   mate $GEMDIR/`ls $GEMDIR | grep $1 | sort | tail -1`
 }
+
+function repoman_update {
+  for file in ~/scm/repoman/*; do
+    if [ -d $file ]; then
+      cd $file && git pull
+    fi
+  done
+}

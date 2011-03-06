@@ -10,10 +10,11 @@ if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
 if [ -f ~/.bash_apps ]; then . ~/.bash_apps ; fi
 if [ -f ~/.bash_user ]; then . ~/.bash_user ; fi
 
-PATH=$HOME/bin:/usr/local/bin:$PATH
+BREW_PATH=/usr/local
+PATH=$HOME/bin:$BREW_PATH/bin:$BREW_PATH/sbin:$PATH
 export PATH
 
-DYLD_LIBRARY_PATH=$HOME/opt/lbm/current/Darwin-9.7.0-x86_64/lib
+DYLD_LIBRARY_PATH=$HOME/opt/lbm/current/Darwin-9.8.0-x86_64/lib
 export DYLD_LIBRARY_PATH
 
 # History
