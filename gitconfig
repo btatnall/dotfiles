@@ -33,7 +33,7 @@
 [core]
   safecrlf = true
   excludesfile = /Users/btatnall/.gitignore
-  editor = mate -wl1
+  editor = vim
 [push]
   default = tracking
 [apply]

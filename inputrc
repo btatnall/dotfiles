@@ -1,0 +1,17 @@
+tab: complete
+
+set editing-mode vi
+set keymap vi
+
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set visible-stats on
+
+set expand-tilde on
+set blink-matching-paren on
+
+set convert-meta off
+set input-meta on
+set output-meta on
+
+set horizontal-scroll-mode off
