@@ -47,9 +47,6 @@ alias j='jobs -l'
 # X Forwarding seems to kill jboss
 # alias ssh='ssh -X'
 
-# Database
-alias mysql=mysql5
-
 # Rails
 alias ss='./script/server'
 alias sc='./script/console'
