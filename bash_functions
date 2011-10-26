@@ -36,3 +36,7 @@ function repoman_update {
     fi
   done
 }
+
+function list_authors {
+  find . -type d -depth 1 | grep -v '.git' | xargs -I {} git --git-dir {}/.git log --oneline --pretty | grep Author | sort | uniq
+}

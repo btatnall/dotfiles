@@ -5,14 +5,11 @@ require 'rubygems'
   'hirb'          => lambda { Hirb::View.enable },
   'irb/completion'=> nil,
   'pp'            => nil,
-  'map_by_method' => nil,
-  'what_methods'  => nil,
 }.each do |name, block|
   begin
     require name
     block.call unless block.nil?
   rescue LoadError => err
-    warn "Error loading #{name}: #{err}"
   end
 end
 

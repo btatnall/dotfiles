@@ -16,6 +16,8 @@ export PATH
 
 DYLD_LIBRARY_PATH=$HOME/opt/lbm/current/Darwin-9.8.0-x86_64/lib
 export DYLD_LIBRARY_PATH
+NODE_PATH=/usr/local/lib/node_modules
+export NODE_PATH
 
 # History
 export HISTCONTROL=ignoredups
