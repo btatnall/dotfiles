@@ -40,9 +40,9 @@ set -o vi
 # make tab cycle through commands instead of listing
 #bind '"\t":menu-complete'
 
-NONE="\e[0m"
-R="\e[0;31m" # red
-G="\e[0;32m" # green
+NONE="\[\033[0m\]"
+R="\[\033[0;31m\]" # red
+G="\[\033[0;32m\]" # green
 function __rvm_ps1 {
 if [[ -f $rvm_path/bin/rvm-prompt ]]; then
 #  local args=("v" "g")
@@ -57,5 +57,4 @@ if [[ -f $rvm_path/bin/rvm-prompt ]]; then
   fi
 fi
 }
-
-PS1="\h \W${G}\$(__git_ps1 \" %s\")${R}\$(__rvm_ps1 \"♦ %s \")${NONE}\$ ";
+PS1="\h \W${G}\$(__git_ps1 \" %s\")${R}\$(__rvm_ps1 \"♦ %s \")${NONE}$ ";
