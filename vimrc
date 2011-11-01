@@ -12,7 +12,7 @@ set fileformats=unix,dos,mac
 
 " Colors
 syntax enable
-colorscheme desert
+colorscheme vividchalk
 
 "backspace over everything in insert mode
 set backspace=indent,eol,start
