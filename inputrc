@@ -1,7 +1,7 @@
 tab: complete
 
-set editing-mode vi
-set keymap vi
+set editing-mode emacs
+set keymap emacs
 
 set completion-ignore-case on
 set show-all-if-ambiguous on
@@ -10,8 +10,20 @@ set visible-stats on
 set expand-tilde on
 set blink-matching-paren on
 
+set met-flag on
 set convert-meta off
 set input-meta on
 set output-meta on
 
 set horizontal-scroll-mode off
+
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word

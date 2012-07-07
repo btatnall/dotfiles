@@ -9,6 +9,9 @@ fi
 
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
+#export LSCOLORS=Exfxcxdxbxegedabagacad
+export GREP_OPTIONS='--color=auto'
+
 
 PAGE=less
 DISPLAY=:0.0

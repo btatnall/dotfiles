@@ -23,3 +23,8 @@ export GIT_PS1_SHOWDIRTYSTATE=true;
 export GIT_PS1_SHOWSTASHSTATE=true;
 export GIT_PS1_SHOWUNTRACKEDFILES=true;
 
+# emacs
+alias e="emacs -nw"
+
+# mongo
+# mongod run --config /usr/local/etc/mongod.conf

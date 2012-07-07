@@ -7,8 +7,8 @@ install: --env-shebang
 update: --env-shebang
 :benchmark: false
 :sources:
+- http://gems.us.drwholdings.com:8808/
+- http://gems-mirror.us.drwholdings.com:8808/
 - http://gemcutter.org
 - http://gems.rubyforge.org
 - http://gems.github.com
-#- http://gems.us.drwholdings.com:8808/
-#- http://gems-mirror.us.drwholdings.com:8808/

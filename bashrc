@@ -5,10 +5,14 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then . ~/.rvm/scripts/rvm ; fi
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then . `brew --prefix`/etc/bash_completion ; fi
+if [ -f `brew --prefix`/etc/grc.bashrc ]; then . `brew --prefix`/etc/grc.bashrc ; fi
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
 if [ -f ~/.bash_apps ]; then . ~/.bash_apps ; fi
 if [ -f ~/.bash_user ]; then . ~/.bash_user ; fi
+
+FIG_REMOTE_URL=ftp://devnas/builds/Fig/repos
+export FIG_REMOTE_URL
 
 BREW_PATH=/usr/local
 PATH=$HOME/bin:$BREW_PATH/bin:$BREW_PATH/sbin:$PATH
@@ -31,7 +35,7 @@ shopt -s cmdhist
 shopt -s checkwinsize
 
 # Use vi inline editing
-set -o vi
+set -o emacs
 
 # make bash autocomplete with up arrow
 #bind '"\020":history-search-backward'
@@ -58,3 +62,5 @@ if [[ -f $rvm_path/bin/rvm-prompt ]]; then
 fi
 }
 PS1="\h \W${G}\$(__git_ps1 \" %s\")${R}\$(__rvm_ps1 \"♦ %s \")${NONE}$ ";
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
