@@ -75,3 +75,8 @@ alias ff_dev="/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P
 
 # NNS
 alias nns="echo entries | nc nns 1500"
+
+# Network
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias flush="dscacheutil -flushcache" # Flush DNS cache

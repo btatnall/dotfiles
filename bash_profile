@@ -7,9 +7,6 @@ if [ -n "$BASH_VERSION" ]; then
   fi
 fi
 
-export CLICOLOR=1
-export LSCOLORS=dxfxcxdxbxegedabagacad
-#export LSCOLORS=Exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 
 

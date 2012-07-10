@@ -1,18 +1,22 @@
 " compatibility
-set nocp
+set nocompatible
+set modelines=0
 
 " Setup bundles
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
-end
-
+filetype off
+call pathogen#infect()
 filetype plugin indent on  " Automatically detect file types.
 set fileformats=unix,dos,mac
 
 " Colors
 syntax enable
-colorscheme vividchalk
+if !has("gui_running")
+  " set t_Co=256
+  " let g:solarized_termcolors=256
+endif
+set background=dark
+colorscheme solarized
+"colorscheme vividchalk
 
 "backspace over everything in insert mode
 set backspace=indent,eol,start
@@ -67,6 +71,7 @@ set hlsearch
 map ? :nohlsearch<CR>
 set ignorecase
 set smartcase
+set relativenumber
 
 "display tabs and trailing spaces
 set list

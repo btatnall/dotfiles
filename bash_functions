@@ -40,3 +40,7 @@ function repoman_update {
 function list_authors {
   find . -type d -depth 1 | grep -v '.git' | xargs -I {} git --git-dir {}/.git log --oneline --pretty | grep Author | sort | uniq
 }
+
+pman () {
+  man -t "${1}" | open -f -a /Applications/Preview.app
+}
