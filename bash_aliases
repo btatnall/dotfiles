@@ -1,5 +1,6 @@
 # ~/.bash_aliases
 
+alias L=launcher
 # LS
 alias ls='ls -hFG'        # add colors for filetype recognition
 alias l='ls'

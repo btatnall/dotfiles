@@ -1,4 +1,5 @@
---- 
+---
+gem: --no-rdoc --no-ri
 :update_sources: true
 :bulk_threshold: 1000
 :verbose: true
@@ -6,9 +7,11 @@ install: --env-shebang
 :backtrace: false
 update: --env-shebang
 :benchmark: false
+http_proxy: http://gems-mirror.us.drwholdings.com:8808/
 :sources:
 - http://gems.us.drwholdings.com:8808/
 - http://gems-mirror.us.drwholdings.com:8808/
-- http://gemcutter.org
+- http://rubygems.org/
 - http://gems.rubyforge.org
 - http://gems.github.com
+- http://gemcutter.org
