@@ -1,5 +1,5 @@
 [user]
-	name = Brian Tatnall
+  name = Brian Tatnall
   email = btatnall@gmail.com
 [color]
   branch = auto
@@ -9,33 +9,42 @@
   status = auto
   ui = auto
 [alias]
-  s = status -sb
-  st = status
+  a = add
+  br = branch
   c = commit -m
   ci = commit
-  br = branch
   co = checkout
+  cp = cherry-pick
+  dc = diff --cached
   df = diff
   di = diff
   dic = diff --cached
   dw = diff --word-diff
-  a = add
-  pl = pull
-  plre = pull --rebase
-  ps = push
+  last = log -1 HEAD
   lg = log -p
   lo = log --oneline --decorate
-  last = log -1 HEAD
+  missing = !sh -c 'git cherry "$0" | cut -sd + -f 2 | xargs "git show"'
+  origin = remote show -n origin
   out = log origin..HEAD
   pending = !git --no-pager log origin/master..master && echo
-  missing = !sh -c 'git cherry "$0" | cut -sd + -f 2 | xargs "git show"'
+  pl = pull
+  plre = pull --rebase
+  pr = pull --rebase
+  ps = push
+  rs = reset
+  s = status -sb
+  st = status
+  w = whatchanged
 [branch]
   autosetupmerge = always
 [core]
   safecrlf = true
-  excludesfile = /Users/btatnall/.gitignore
+  excludesfile = $HOME/.gitignore
   editor = vim
 [push]
   default = tracking
 [apply]
   ignorewhitespace = true
+  whitespace = nowarn
+[rerere]
+  enabled = true
