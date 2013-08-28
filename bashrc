@@ -4,24 +4,19 @@
 if [[ -s ~/.rvm/scripts/rvm ]] ; then . ~/.rvm/scripts/rvm ; fi
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then . `brew --prefix`/etc/bash_completion ; fi
-if [ -f `brew --prefix`/etc/grc.bashrc ]; then . `brew --prefix`/etc/grc.bashrc ; fi
+BREW_PATH=/usr/local
+BREW_PREFIX=`brew --prefix`
+if [ -f $BREW_PREFIX/etc/bash_completion ]; then . $BREW_PREFIX/etc/bash_completion ; fi
+if [ -f $BREW_PREFIX/etc/grc.bashrc ]; then . $BREW_PREFIX/etc/grc.bashrc ; fi
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases ; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions ; fi
 if [ -f ~/.bash_apps ]; then . ~/.bash_apps ; fi
 if [ -f ~/.bash_user ]; then . ~/.bash_user ; fi
 
-FIG_REMOTE_URL=ftp://devnas/builds/Fig/repos
-export FIG_REMOTE_URL
-
-BREW_PATH=/usr/local
-PATH=$HOME/bin:$BREW_PATH/bin:$BREW_PATH/sbin:$PATH
-export PATH
-
-DYLD_LIBRARY_PATH=$HOME/opt/lbm/current/Darwin-9.8.0-x86_64/lib
-export DYLD_LIBRARY_PATH
-NODE_PATH=/usr/local/lib/node_modules
-export NODE_PATH
+export FIG_REMOTE_URL=ftp://devnas/builds/Fig/repos
+export PATH=$HOME/bin:$BREW_PATH/bin:$BREW_PATH/sbin:$HOME/.rvm/bin:$PATH
+export DYLD_LIBRARY_PATH=$HOME/opt/lbm/current/Darwin-9.8.0-x86_64/lib
+export NODE_PATH=/usr/local/lib/node_modules
 
 # History
 export HISTCONTROL=ignoredups
@@ -34,7 +29,7 @@ shopt -s cdspell
 shopt -s cmdhist
 shopt -s checkwinsize
 
-# Use vi inline editing
+# Use inline editing style
 set -o emacs
 
 # make bash autocomplete with up arrow
@@ -63,4 +58,5 @@ fi
 }
 PS1="\h \W${G}\$(__git_ps1 \" %s\")${R}\$(__rvm_ps1 \"♦ %s \")${NONE}$ ";
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# LAUNCHER (bash completion)
+if [[ -s /Users/btatnall/.launcher/launcher_completion.bash ]] ; then source /Users/btatnall/.launcher/launcher_completion.bash ; fi

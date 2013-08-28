@@ -4,16 +4,11 @@
 --sort-files
 --context=1
 
---all
---type-add
-ruby=.haml,.builder
---type-add
-css=.sass
---type-set
-markdown=.markdown,.md,.mdown
+--type-add=ruby=.haml,.builder
+--type-add=css=.sass
 
---ignore-dir=.nbproject
---ignore-dir=.idea
---ignore-dir=vendor
---ignore-dir=log
---ignore-dir=logs
+--type-set=markdown=.markdown,.md,.mdown
+--type-set=minjs=.min.js
+
+--nominjs
+--nosql

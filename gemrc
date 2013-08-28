@@ -7,11 +7,8 @@ install: --env-shebang
 :backtrace: false
 update: --env-shebang
 :benchmark: false
-http_proxy: http://gems-mirror.us.drwholdings.com:8808/
 :sources:
-- http://gems.us.drwholdings.com:8808/
-- http://gems-mirror.us.drwholdings.com:8808/
-- http://rubygems.org/
-- http://gems.rubyforge.org
-- http://gems.github.com
-- http://gemcutter.org
+  - http://gems/
+  - http://gems-mirror/
+#  - https://rubygems.org/
+#  - http://gems.github.com

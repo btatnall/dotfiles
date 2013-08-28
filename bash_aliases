@@ -63,6 +63,7 @@ alias svnaddall='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add' # 
 alias g="git"
 
 # Vim
+alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
 alias nerd='vim -c NERDTree'
 
 # Screen
@@ -81,3 +82,6 @@ alias nns="echo entries | nc nns 1500"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias flush="dscacheutil -flushcache" # Flush DNS cache
+
+# Lua
+alias love="/Applications/love.app/Contents/MacOS/love"
